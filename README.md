@@ -1,6 +1,6 @@
 # os-testing
 
-![CI - build](https://github.com/sebastian-pazmay/os-testing/workflows/build-ci/badge.svg)
+![CI - build](https://github.com/sebastian-pazmay/os-testing/workflows/Build%20Docker%20Image%20CI/badge.svg)
 
 Test suite written in GO, to verify Linux systems configuration
 
