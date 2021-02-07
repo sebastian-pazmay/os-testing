@@ -14,4 +14,6 @@ jobs:
     - name: Build and Run the Docker image
       run: |
           docker build . --file Dockerfile --tag os-testing:$(date +%s)
+          ls
+          docker images
           docker run --rm os-testing:$(date +%s)
