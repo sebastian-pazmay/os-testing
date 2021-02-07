@@ -9,13 +9,16 @@ import (
 func VerifyOSVersion(osVersion string) (bool) {
 	var resultBool bool
 	cmdOut, err := exec.Command("cat","/etc/issue").Output()
-    if err != nil {
+    fmt.Printf("OS version: %s", cmdOut)
+	if err != nil {
         fmt.Printf("%s", err)
     }
     cmdOutStr := string(cmdOut[:])
 	if cmdOutStrContainsOSVer := strings.Contains(cmdOutStr, osVersion) ; cmdOutStrContainsOSVer {
 		resultBool = true
-	} else { resultBool = false }
+	} else { 
+		resultBool = false 
+	}
 	return resultBool
 }
 

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-    "os-testing/testSuites"
+    "os-testing-app/testSuites"
 )
 
 var expectedVersion = "Ubuntu 18.04.5"
