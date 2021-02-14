@@ -12,7 +12,7 @@ In order to build the GO program, run:
 $ go build main.go
 ```
 
-After the executable file is build, run it as a root user
+After the executable file is built, run it as a root user
 
 ```
 $ ./main
