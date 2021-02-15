@@ -24,7 +24,7 @@ jobs:
         cd os-testing-app
         env GOOS=linux GOARCH=amd64 go build -o packages/linux-os-testing main.go
         env GOOS=windows GOARCH=amd64 go build -o packages/windows-os-testing main.go
-        echo "Executable Files" >> README.md
+        echo "Executable Files" >> packages/README.md
         ls packages
     - uses: actions/upload-artifact@v2
       with:
