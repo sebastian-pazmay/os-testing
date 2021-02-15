@@ -7,9 +7,19 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  test_in_container:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag os-testing:$(date +%s)
+  build_executables:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-go@v2
+      with:
+        go-version: '1.14.0' # The Go version to download (if necessary) and use.
+    - run: |
+        env GOOS=linux GOARCH=amd64 go build -o linux-os-testing main.go
+        env GOOS=windows GOARCH=amd64 go build -o windows-os-testing main.go
