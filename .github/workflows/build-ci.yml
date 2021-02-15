@@ -25,3 +25,6 @@ jobs:
         env GOOS=linux GOARCH=amd64 go build -o linux-os-testing main.go
         env GOOS=windows GOARCH=amd64 go build -o windows-os-testing main.go
         ls
+    - uses: actions/upload-artifact@v2
+      with:
+        name: linux-os-testing windows-os-testing
