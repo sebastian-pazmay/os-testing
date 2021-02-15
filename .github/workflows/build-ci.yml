@@ -26,9 +26,8 @@ jobs:
         env GOOS=windows GOARCH=amd64 go build -o packages/windows-os-testing main.go
         echo "Executable Files" >> packages/README.md
         ls packages
-        tar -cvf packages.tar packages/
     - uses: actions/upload-artifact@v2
       with:
         name: os-testing-packages
-        path: ${{ github.workspace }}/os-testing-app/packages.tar
+        path: ${{ github.workspace }}/os-testing-app/packages/*
         if-no-files-found: error
