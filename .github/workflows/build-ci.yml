@@ -27,5 +27,6 @@ jobs:
         ls packages
     - uses: actions/upload-artifact@v2
       with:
-        name: packages/linux-os-testing packages/windows-os-testing
+        name: linux-os-testing windows-os-testing
         path: ${{ github.workspace }}/packages/*
+        if-no-files-found: error
