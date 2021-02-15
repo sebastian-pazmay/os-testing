@@ -21,7 +21,8 @@ jobs:
       with:
         go-version: '1.14.0'
     - run: |
-        cp README.md os-testing-app/
+        mkdir packages/
+        cp README.md packages/
         cd os-testing-app
         env GOOS=linux GOARCH=amd64 go build -o packages/linux-os-testing main.go
         env GOOS=windows GOARCH=amd64 go build -o packages/windows-os-testing main.go
