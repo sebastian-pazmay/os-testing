@@ -21,8 +21,6 @@ jobs:
       with:
         go-version: '1.14.0' # The Go version to download (if necessary) and use.
     - run: |
-        pwd
-        ls
         cd os-testing-app
         env GOOS=linux GOARCH=amd64 go build -o linux-os-testing main.go
         env GOOS=windows GOARCH=amd64 go build -o windows-os-testing main.go
