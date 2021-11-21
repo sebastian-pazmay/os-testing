@@ -17,3 +17,18 @@ After the executable file is built, run it as a root user
 ```
 $ ./main
 ```
+
+## Using Go Test
+
+To create a binary:
+
+```
+$ go test -v -c -o test-suite
+$ ./test-suite
+```
+
+To use go test:
+
+```
+$ go test -v ./...
+```
